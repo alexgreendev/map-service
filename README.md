@@ -1,7 +1,7 @@
 # map-service
 A small example of microservice architecture
 
-##Services
+## Services
 * front_server - nginx
 * user_service - Authentication by JWT. python, fastapi, sqlalchemy core, [databases](https://github.com/encode/databases/)
 
