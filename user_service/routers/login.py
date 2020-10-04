@@ -27,11 +27,13 @@ async def login(
         if not user:
             raise HTTPException(
                 status_code=404,
+                detail=f"User with name: '{name}' not found",
             )
 
         if not check_hash(hash_code=user['hash_code'], code=password):
             raise HTTPException(
                 status_code=403,
+                detail=f"Incorrect username or password",
             )
 
         token = jwt.encode({
