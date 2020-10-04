@@ -19,7 +19,6 @@ services:
     volumes:
       - ./database:/database
       - data-postgres12:/var/lib/postgresql/12/main
-      - /dev/log:/dev/log
     ports:
       - "6432:5432"
   user_service:
