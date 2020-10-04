@@ -32,6 +32,17 @@ services:
       - ./user_service:/usr/user_service
     env_file:
       - ./user_service/.env
+  map_service:
+    image: map_service
+    build:
+      context: map_service/dependencies/docker
+      dockerfile: Dockerfile
+    container_name: maps_map_service
+    restart: always
+    volumes:
+      - ./map_service:/usr/map_service
+    env_file:
+      - ./map_service/.env
 
 volumes:
   data-postgres12:

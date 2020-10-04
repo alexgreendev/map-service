@@ -3,7 +3,9 @@ A small example of microservice architecture
 
 ## Services
 * front_server - nginx
+* database - postgresql-12
 * user_service - Authentication by JWT. python, fastapi, sqlalchemy core, [databases](https://github.com/encode/databases/)
+* map_service
 
 ## Quick start
 1. Build docker images
