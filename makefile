@@ -2,8 +2,6 @@
 
 default:
 	docker-compose build
-	make init.db
-	make us.db.seed
 
 nginx.restart:
 	docker exec -ti maps_front_server /bin/bash -c \
